@@ -12,24 +12,5 @@ instances:
   #                                 # values for MIB constraints (defaults to true).
 
      metrics:
-       - MIB: UDP-MIB
-         symbol: udpInDatagrams
-       - MIB: TCP-MIB
-         symbol: tcpActiveOpens
        - OID: iso.3.6.1.2.1.1.1.0
-         name: tcpPassiveOpens
-       - MIB: IF-MIB
-         table: ifTable
-         symbols:
-           - ifInOctets
-           - ifOutOctets
-         metric_tags:
-           - tag: interface
-             column: ifDescr
-       - MIB: IP-MIB
-          table: ipSystemStatsTable
-          symbols:
-            - ipSystemStatsInReceives
-          metric_tags:
-            - tag: ipversion
-              index: 1
+         name: version
