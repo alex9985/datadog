@@ -5,7 +5,7 @@ instances:
    - ip_address: 192.168.2.1
      port: 161
      community_string: pfread
-  #  snmp_version: 2                # Only required for snmp v1, defaults to 2
+     snmp_version: 2                # Only required for snmp v1, defaults to 2
      timeout: 1
      retries: 5
   #  enforce_mib_constraints: true  # Use false to skip verification of returned
