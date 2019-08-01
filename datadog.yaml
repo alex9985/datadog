@@ -17,4 +17,4 @@ apm_config:
 jmx_use_cgroup_memory_limit: true
 
 #log level
-log_level: INFO
+log_level: DEBUG
