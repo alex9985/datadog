@@ -9,6 +9,6 @@ instances:
   #                                 # values for MIB constraints (defaults to true).
      metrics:
        - OID: 1.3.6.1.2.1.25.3.3.1.2.7
-         name: cpu_core_1
+         name: pfsense_cpu_core_1
        - OID: 1.3.6.1.2.1.25.3.3.1.2.13
-         name: cpu_core_2
+         name: pfsense_cpu_core_2
