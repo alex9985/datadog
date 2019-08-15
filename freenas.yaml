@@ -1,0 +1,16 @@
+instances:
+   - ip_address: 192.168.2.1
+     port: 161
+     community_string: pfread
+     snmp_version: 1
+     timeout: 3
+     retries: 5
+  #  enforce_mib_constraints: true  # Use false to skip verification of returned
+  #                                 # values for MIB constraints (defaults to true).
+     metrics:
+       - OID: 1.3.6.1.2.1.25.3.3.1.2.196608
+         name: freenas_cpu_core_1
+       - OID: 1.3.6.1.2.1.25.3.3.1.2.196609
+         name: freenas_cpu_core_2
+       - OID: 1.3.6.1.2.1.25.3.3.1.2
+         name: freenas_cores
