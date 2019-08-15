@@ -1,5 +1,5 @@
 instances:
-   - ip_address: 192.168.2.1
+   - ip_address: 192.168.4.2
      port: 161
      community_string: freenasread
      snmp_version: 1
