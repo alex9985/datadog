@@ -35,4 +35,4 @@ instances:
           - hrStorageAllocationFailures
         metric_tags:
           - tag: ram
-            column: hrStorageName
+            column: hrStorageDescr
