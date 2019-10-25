@@ -30,7 +30,6 @@ instances:
       - MIB: HOST-RESOURCES-TYPES
         table: hrStorageTable
         symbols:
-          - hrStorageDescr
           - hrStorageAllocationUnits
           - hrStorageSize
           - hrStorageUsed
