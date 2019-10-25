@@ -15,6 +15,15 @@ instances:
         symbols:
           - ifHCInOctets
           - ifHCOutOctets
+          - ifInErrors
+          - ifOutErrors
         metric_tags:
           - tag: interface
             column: ifName
+      - MIB: HOST-RESOURCES-MIB
+        table: hrProcessorTable
+        symbols:
+          - hrProcessorLoad
+        metric_tags:
+          - tag: cpu
+            column: hrProcessorFrwID
