@@ -5,7 +5,7 @@ cd /etc/datadog-agent/conf.d/snmp.d
         do sudo rm $i; 
         echo 'deleted ' + $i
     done
-sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o /etc/datadog-agent/conf.d/snmp.d/pfsense.yaml
-sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o /etc/datadog-agent/conf.d/snmp.d/freenas.yaml
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o pfsense.yaml
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o reenas.yaml
 sudo service datadog-agent restart
 
