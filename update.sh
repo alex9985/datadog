@@ -8,4 +8,3 @@ cd /etc/datadog-agent/conf.d/snmp.d
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o pfsense.yaml
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o reenas.yaml
 sudo service datadog-agent restart
-
