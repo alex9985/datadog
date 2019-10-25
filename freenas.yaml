@@ -1,6 +1,5 @@
 init_config:
 instances:
-  - min_collection_interval: 120
   - ip_address: 192.168.4.2
     port: 161
     community_string: freenasread
