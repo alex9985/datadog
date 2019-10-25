@@ -7,14 +7,13 @@ instances:
      timeout: 3
      retries: 5
      tags:
-      - device_type:pfsense
-
+       - device_type:pfsense
      metrics:
-      - MIB: IF-MIB
-        table: ifXTable
-        symbols:
-         - ifHCInOctets
-         - ifHCOutOctets
-        metric_tags:
-         - tag: interface
-           column: ifName
+       - MIB: IF-MIB
+         table: ifXTable
+         symbols:
+           - ifHCInOctets
+           - ifHCOutOctets
+         metric_tags:
+           - tag: interface
+             column: ifName
