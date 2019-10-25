@@ -1,5 +1,6 @@
 init_config:
 instances:
+  - min_collection_interval: 60
   - ip_address: 192.168.2.1
     port: 161
     community_string: pfread
