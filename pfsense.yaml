@@ -10,7 +10,7 @@ instances:
        - device_type:pfsense
      metrics:
        - MIB: IF-MIB
-         table: ifXTable
+         table: ifTable
          symbols:
            - ifHCInOctets
            - ifHCOutOctets
