@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo mkdir /tmp/templates
+sudo mkdir /tmp/datadog
 cd /tmp/templates
     for i in $(find -name "*.yaml"); 
         do sudo rm $i; 
