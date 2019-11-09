@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo docker rm -f $(sudo docker ps -qa);
 cd /tmp
     for i in $(find -name "*.yaml"); 
