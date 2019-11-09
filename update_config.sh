@@ -8,7 +8,8 @@ cd /tmp
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/pfsense.yaml?token=ALZSSGLH2PDP3A5YHHSHSAC5Y4NS6 -o /tmp/pfsense.yaml;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml?token=ALZSSGNJJQXGTH7EPHRLJL25Y4NUG -o /tmp/freenas.yaml;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/create-container.sh?token=ALZSSGNBC6DGI3TXFQWWQEC5Y4NQG -o /tmp/create-container.sh;
-
+sudo chmod +x create-container.sh
+read key
 while :
 do
 if ["$(ls -A /tmp/)"]; then
