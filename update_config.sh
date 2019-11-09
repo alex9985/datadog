@@ -7,10 +7,10 @@ cd /tmp/templates
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/pfsense.yaml -o /tmp/templates/pfsense.yaml;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o /tmp/templates/freenas.yaml;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/create-container.sh -o /tmp/datadog/create-container.sh;
-
 echo "removing old conteiners"
 sudo docker rm -f $(sudo docker ps -qa)
 echo "finished cleaning docker"
+cd /tmp/datadog
 sudo chmod +x create-container.sh
 #while :
 #do
