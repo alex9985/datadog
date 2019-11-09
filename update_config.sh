@@ -1,22 +1,24 @@
 #!/bin/bash
-sudo docker rm -f $(sudo docker ps -qa);
-cd /tmp
+cd /tmp/templates
     for i in $(find -name "*.yaml"); 
         do sudo rm $i; 
         echo 'deleted ' + $i
     done;
-sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/pfsense.yaml?token=ALZSSGLH2PDP3A5YHHSHSAC5Y4NS6 -o /tmp/pfsense.yaml;
-sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml?token=ALZSSGNJJQXGTH7EPHRLJL25Y4NUG -o /tmp/freenas.yaml;
-sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/create-container.sh?token=ALZSSGNBC6DGI3TXFQWWQEC5Y4NQG -o /tmp/create-container.sh;
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/pfsense.yaml -o /tmp/templates/pfsense.yaml;
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o /tmp/templates/freenas.yaml;
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/create-container.sh -o /tmp/datadog/create-container.sh;
+
+echo "removing old conteiners"
+sudo docker rm -f $(sudo docker ps -qa)
+echo "finished cleaning docker"
 sudo chmod +x create-container.sh
-read key
-while :
-do
-if ["$(ls -A /tmp/)"]; then
-echo 'running container'
-/tmp/create-container.sh
-else
-echo 'done running container'
-break
-fi
-done
+#while :
+#do
+#if [ "$(ls /tmp/templates)" ]; then
+#echo 'running container'
+/tmp/datadog/create-container.sh
+#else
+#echo 'done running container'
+#break
+#fi
+#done
