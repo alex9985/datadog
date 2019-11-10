@@ -17,6 +17,10 @@ instances:
           - ifHCOutOctets
           - ifInErrors
           - ifOutErrors
+          - ifAdminStatus
+          - ifSpeed
+          - ifOperStatus
+          - ifInUnknownProtos
         metric_tags:
           - tag: interface
             column: ifName
