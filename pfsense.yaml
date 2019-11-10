@@ -40,3 +40,11 @@ instances:
         metric_tags:
           - tag: storage
             column: hrStorageDescr
+      - MIB: HOST-RESOURCES-MIB
+        table: hrDeviceTable
+        symbols:
+          - hrDeviceStatus
+          - hrDeviceErrors
+        metric_tags:
+          - tag: device
+            column: hrDeviceDescr
