@@ -31,3 +31,12 @@ instances:
         metric_tags:
           - tag: cpu
             column: hrProcessorFrwID
+      - MIB: HOST-RESOURCES-MIB
+        table: hrStorageTable
+        symbols:
+          - hrStorageSize
+          - hrStorageUsed
+          - hrStorageAllocationFailures
+        metric_tags:
+          - tag: storage
+            column: hrStorageType
