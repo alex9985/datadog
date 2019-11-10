@@ -39,4 +39,4 @@ instances:
           - hrStorageAllocationFailures
         metric_tags:
           - tag: storage
-            column: hrStorageType
+            column: hrStorageName

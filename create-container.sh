@@ -25,7 +25,6 @@ function create_container {
                 echo "copying yaml templates"
                 sudo  docker cp /tmp/templates/pfsense.yaml $image:/etc/datadog-agent/conf.d/snmp.d
                 sudo  docker cp /tmp/templates/freenas.yaml $image:/etc/datadog-agent/conf.d/snmp.d
-                echo "restarting container $image"
                 sudo docker restart $image
         done
                           }
