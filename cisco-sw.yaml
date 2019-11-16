@@ -23,27 +23,3 @@ instances:
         metric_tags:
           - tag: interface
             column: ifName
-      - MIB: HOST-RESOURCES-MIB
-        table: hrProcessorTable
-        symbols:
-          - hrProcessorLoad
-        metric_tags:
-          - tag: cpu
-            column: hrProcessorFrwID
-      - MIB: HOST-RESOURCES-MIB
-        table: hrStorageTable
-        symbols:
-          - hrStorageSize
-          - hrStorageUsed
-          - hrStorageAllocationFailures
-        metric_tags:
-          - tag: storage
-            column: hrStorageDescr
-      - MIB: HOST-RESOURCES-MIB
-        table: hrDeviceTable
-        symbols:
-          - hrDeviceStatus
-          - hrDeviceErrors
-        metric_tags:
-          - tag: device
-            column: hrDeviceDescr
