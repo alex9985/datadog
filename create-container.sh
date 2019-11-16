@@ -8,6 +8,7 @@ cd /tmp/templates
     done;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/pfsense.yaml -o /tmp/templates/pfsense.yaml;
 sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/freenas.yaml -o /tmp/templates/freenas.yaml;
+sudo curl https://raw.githubusercontent.com/alex9985/datadog/master/cisco-sw.yaml -o /tmp/templates/cisco-sw.yaml;
 #
 echo "removing old conteiners"
 sudo docker rm -f $(sudo docker ps -qa)

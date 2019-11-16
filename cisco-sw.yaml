@@ -1,0 +1,49 @@
+init_config:
+instances:
+  - ip_address: 192.168.2.2
+    port: 161
+    community_string: switchread
+    snmp_version: 2
+    timeout: 3
+    retries: 5
+    tags:
+      - device_type:cisco-sw
+    metrics:
+      - MIB: IF-MIB
+        table: ifTable
+        symbols:
+          - ifHCInOctets
+          - ifHCOutOctets
+          - ifInErrors
+          - ifOutErrors
+          - ifAdminStatus
+          - ifSpeed
+          - ifOperStatus
+          - ifInUnknownProtos
+        metric_tags:
+          - tag: interface
+            column: ifName
+      - MIB: HOST-RESOURCES-MIB
+        table: hrProcessorTable
+        symbols:
+          - hrProcessorLoad
+        metric_tags:
+          - tag: cpu
+            column: hrProcessorFrwID
+      - MIB: HOST-RESOURCES-MIB
+        table: hrStorageTable
+        symbols:
+          - hrStorageSize
+          - hrStorageUsed
+          - hrStorageAllocationFailures
+        metric_tags:
+          - tag: storage
+            column: hrStorageDescr
+      - MIB: HOST-RESOURCES-MIB
+        table: hrDeviceTable
+        symbols:
+          - hrDeviceStatus
+          - hrDeviceErrors
+        metric_tags:
+          - tag: device
+            column: hrDeviceDescr
